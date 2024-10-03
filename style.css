@@ -42,42 +42,12 @@ body{
     background-color: #0b0b11;
     transition: 0.3s;
 }
+
 .header.sticky{
     padding-block: 10px;
     box-shadow: inset 0 -1.5px 3px rgba(255,255,255,0.3);
 }
-.header .search-bar {
-    display: flex;
-    align-items: center;
-}
 
-.header .search-bar input {
-    padding: 0.5rem;
-    border: 2px solid #555;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    width: 200px;
-    transition: all 0.3s;
-}
-
-.header .search-bar input:focus {
-    border-color: #2196f3;
-    width: 250px;
-}
-
-.header .search-bar button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: #2196f3;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.header .search-bar button:hover {
-    background-color: #1e88e5;
-}
 .logo{
     font-size: 45px;
     font-weight: 700;
