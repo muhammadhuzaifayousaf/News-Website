@@ -1,11 +1,11 @@
 // DOM element selectors
-let breakingImg = document.querySelector('#breakingImg');
-let breakingNews_title = document.querySelector('#breakingNews .title');
-let breakingNews_desc = document.querySelector('#breakingNews .description');
-let topNews = document.querySelector('.topNews');
+let topNews = document.querySelector('#topNews .newsBox');
 let sportsNews = document.querySelector('#sportsNews .newsBox');
 let businessNews = document.querySelector('#businessNews .newsBox');
 let techNews = document.querySelector('#techNews .newsBox');
+let worldNews = document.querySelector('#worldNews .newsBox');
+let politicsNews = document.querySelector('#politicsNews .newsBox');
+let entertainmentNews = document.querySelector('#entertainmentNews .newsBox');
 
 let header = document.querySelector('.header');
 let toggleMenu = document.querySelector('.bar');
@@ -42,23 +42,14 @@ const fetchData = async (category) => {
     }
 };
 
-// Adding breaking news
-const add_breakingNews = (data) => {
-    const newsItem = data[0]; // First news item for breaking news
-    breakingImg.innerHTML = `<img src="${newsItem.image_url || 'default-image.jpg'}" alt="Breaking news image">`;
-    breakingNews_title.innerHTML = `<a href="${newsItem.link}" target="_blank"><h2>${newsItem.title}</h2></a>`;
-    breakingNews_desc.innerHTML = `${newsItem.description || 'No description available.'}`;
-};
-fetchData('general').then(add_breakingNews);
-
-// Adding top news
+// Fetch Top News
 const add_topNews = (data) => {
     let html = '';
     data.forEach((newsItem) => {
         let title = newsItem.title.length < 100 ? newsItem.title : newsItem.title.slice(0, 100) + '...';
-        html += `<div class="news">
+        html += `<div class="newsCard">
                     <div class="img">
-                        <img src="${newsItem.image_url || 'default-image.jpg'}" alt="news image">
+                        <img src="${newsItem.image_url || 'default-image.jpg'}" alt="top news image">
                     </div>
                     <div class="text">
                         <div class="title">
@@ -69,7 +60,67 @@ const add_topNews = (data) => {
     });
     topNews.innerHTML = html;
 };
-fetchData('general').then(add_topNews);
+fetchData('top').then(add_topNews);
+
+// Fetch World News
+const add_worldNews = (data) => {
+    let html = '';
+    data.forEach((newsItem) => {
+        let title = newsItem.title.length < 100 ? newsItem.title : newsItem.title.slice(0, 100) + '...';
+        html += `<div class="newsCard">
+                    <div class="img">
+                        <img src="${newsItem.image_url || 'default-image.jpg'}" alt="world news image">
+                    </div>
+                    <div class="text">
+                        <div class="title">
+                            <a href="${newsItem.link}" target="_blank"><p>${title}</p></a>
+                        </div>
+                    </div>
+                </div>`;
+    });
+    worldNews.innerHTML = html;
+};
+fetchData('world').then(add_worldNews);
+
+// Fetch Politics News
+const add_politicsNews = (data) => {
+    let html = '';
+    data.forEach((newsItem) => {
+        let title = newsItem.title.length < 100 ? newsItem.title : newsItem.title.slice(0, 100) + '...';
+        html += `<div class="newsCard">
+                    <div class="img">
+                        <img src="${newsItem.image_url || 'default-image.jpg'}" alt="politics news image">
+                    </div>
+                    <div class="text">
+                        <div class="title">
+                            <a href="${newsItem.link}" target="_blank"><p>${title}</p></a>
+                        </div>
+                    </div>
+                </div>`;
+    });
+    politicsNews.innerHTML = html;
+};
+fetchData('politics').then(add_politicsNews);
+
+// Fetch Entertainment News
+const add_entertainmentNews = (data) => {
+    let html = '';
+    data.forEach((newsItem) => {
+        let title = newsItem.title.length < 100 ? newsItem.title : newsItem.title.slice(0, 100) + '...';
+        html += `<div class="newsCard">
+                    <div class="img">
+                        <img src="${newsItem.image_url || 'default-image.jpg'}" alt="entertainment news image">
+                    </div>
+                    <div class="text">
+                        <div class="title">
+                            <a href="${newsItem.link}" target="_blank"><p>${title}</p></a>
+                        </div>
+                    </div>
+                </div>`;
+    });
+    entertainmentNews.innerHTML = html;
+};
+fetchData('entertainment').then(add_entertainmentNews);
 
 // Adding sports news
 const add_sportsNews = (data) => {
