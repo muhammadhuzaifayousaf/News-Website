@@ -9,20 +9,24 @@
         integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>News Website</title>
+    <title>THE NEWS</title>
 </head>
 
 <body>
     <div class="header">
         <div class="logo">
-            NEWS
+            THE NEWS
         </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#sportsNews">Sports</a></li>
-                <li><a href="#businessNews">Business</a></li>
+                <li><a href="#topNews">Top News</a></li>
                 <li><a href="#techNews">Technology</a></li>
+                <li><a href="#worldNews">World</a></li>
+                <li><a href="#businessNews">Business</a></li>
+                <li><a href="#politicsNews">Politics</a></li>
+                <li><a href="#sportsNews">Sports</a></li>
+                <li><a href="#entertainmentNews">Entertainment</a></li>
             </ul>
             <div class="bar">
                 <i class="open fa-solid fa-bars-staggered"></i>
@@ -30,40 +34,60 @@
             </div>
         </nav>
     </div>
-    <div class="topHeadlines">
-        <div class="left">
-            <div class="title">
-                <h2>Breaking News</h2>
-            </div>
-            <div class="img" id="breakingImg"></div>
-            <div class="text" id="breakingNews">
-                <div class="title"></div>
-                <div class="description"></div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="title">
-                <h2>Top Headlines</h2>
-            </div>
-            <div class="topNews"></div>
-        </div>
-    </div>
+    
     <div class="page2">
-        <div class="news" id="sportsNews">
+        <!-- Top News Section -->
+        <div class="news" id="topNews">
             <div class="title">
-                <h2>Sports News</h2>
+                <h2>Top News</h2>
             </div>
             <div class="newsBox"></div>
         </div>
+
+        <!-- Technology News Section -->
+        <div class="news" id="techNews">
+            <div class="title">
+                <h2>Technology News</h2>
+            </div>
+            <div class="newsBox"></div>
+        </div>
+
+        <!-- World News Section -->
+        <div class="news" id="worldNews">
+            <div class="title">
+                <h2>World News</h2>
+            </div>
+            <div class="newsBox"></div>
+        </div>
+
+        <!-- Business News Section -->
         <div class="news" id="businessNews">
             <div class="title">
                 <h2>Business News</h2>
             </div>
             <div class="newsBox"></div>
         </div>
-        <div class="news" id="techNews">
+
+        <!-- Politics News Section -->
+        <div class="news" id="politicsNews">
             <div class="title">
-                <h2>Technology News</h2>
+                <h2>Politics News</h2>
+            </div>
+            <div class="newsBox"></div>
+        </div>
+
+        <!-- Sports News Section -->
+        <div class="news" id="sportsNews">
+            <div class="title">
+                <h2>Sports News</h2>
+            </div>
+            <div class="newsBox"></div>
+        </div>
+
+        <!-- Entertainment News Section -->
+        <div class="news" id="entertainmentNews">
+            <div class="title">
+                <h2>Entertainment News</h2>
             </div>
             <div class="newsBox"></div>
         </div>
@@ -74,15 +98,13 @@
             <div class="left">
                 <div class="categories">
                     <p>Categories</p>
-                    <div>
-                        <p>Sports</p>
-                    </div>
-                    <div>
-                        <p>Business</p>
-                    </div>
-                    <div>
-                        <p>Technology</p>
-                    </div>
+                    <div><a href="#topNews">Top News</a></div>
+                    <div><a href="#techNews">Technology</a></div>
+                    <div><a href="#worldNews">World</a></div>
+                    <div><a href="#businessNews">Business</a></div>
+                    <div><a href="#politicsNews">Politics</a></div>
+                    <div><a href="#sportsNews">Sports</a></div>
+                    <div><a href="#entertainmentNews">Entertainment</a></div>
                 </div>
                 <div class="contactUs">
                     <div class="contact">
@@ -109,7 +131,7 @@
             </div>
         </div>
         <div class="copyrights">
-            Copyrights &copy; 2022 Coders Villa
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> THE NEWS. All rights reserved.</p>
         </div>
     </div>
 
